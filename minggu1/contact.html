@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Yudha Pratama</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">Yudha Pratama</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <h1>Contact</h1>
+            <p>Berikut adalah beberapa cara untuk menghubungi saya</p>
+        </section>
+
+        <section class="contact-form-section">
+            <form action="#" method="POST" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Nama Lengkap</label>
+                    <input type="text" id="name" name="name" required placeholder="Masukkan nama lengkap Anda">
+                </div>
+                <div class="form-group">
+                    <label for="email">Alamat Email</label>
+                    <input type="email" id="email" name="email" required placeholder="Masukkan alamat email Anda">
+                </div>
+                <div class="form-group">
+                    <label for="category">Kategori / Keperluan</label>
+                    <select id="category" name="category" required>
+                        <option value="" disabled selected>Pilih keperluan...</option>
+                        <option value="konsultasi">Konsultasi</option>
+                        <option value="kolaborasi">Kolaborasi Proyek</option>
+                        <option value="pertanyaan">Pertanyaan Umum</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Pesan</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="Tulis pesan Anda di sini..."></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Kirim Pesan</button>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>
