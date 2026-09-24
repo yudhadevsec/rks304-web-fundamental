@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masuk - Seller Center</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Poppins', 'sans-serif'] },
+                    colors: { primary: '#ee4d2d' }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
+    <div class="max-w-md w-full bg-white p-6 rounded-sm shadow-sm border border-gray-200">
+        <div class="mb-6 text-center">
+            <h1 class="text-xl font-medium text-gray-800">Selamat Datang</h1>
+            <p class="text-gray-500 mt-1 text-sm">Silakan masuk ke akun toko Anda</p>
+        </div>
+        <form action="dashboard.html" class="space-y-4">
+            <div>
+                <label for="username" class="block text-sm text-gray-600 mb-1">Nama Pengguna</label>
+                <input type="text" id="username" class="w-full px-3 py-2 bg-gray-50 border border-gray-200 rounded-sm focus:bg-white focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors text-sm text-gray-800" placeholder="Masukkan nama pengguna" required>
+            </div>
+            <div>
+                <label for="password" class="block text-sm text-gray-600 mb-1">Kata Sandi</label>
+                <input type="password" id="password" class="w-full px-3 py-2 bg-gray-50 border border-gray-200 rounded-sm focus:bg-white focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors text-sm text-gray-800" placeholder="••••••••" required>
+            </div>
+            <button type="submit" class="w-full bg-primary text-white font-medium py-2 px-4 rounded-sm hover:bg-orange-600 transition-colors mt-2 text-sm shadow-sm">
+                Masuk
+            </button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produk - Seller Center</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Poppins', 'sans-serif'] },
+                    colors: { primary: '#ee4d2d' }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800 flex min-h-screen">
+
+    <!-- Sidebar -->
+    <aside class="w-60 bg-white border-r border-gray-200 flex flex-col justify-between fixed h-full z-20">
+        <div>
+            <!-- Logo -->
+            <div class="h-14 flex items-center px-5 border-b border-gray-100">
+                <span class="text-base font-medium text-primary flex items-center gap-2">
+                    <i class="ph ph-storefront text-xl"></i> Seller Center
+                </span>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="p-3 space-y-1 mt-1 text-sm">
+                <a href="dashboard.html" class="flex items-center gap-3 px-3 py-2 rounded-sm text-gray-600 hover:bg-gray-50 hover:text-primary transition-colors">
+                    <i class="ph ph-squares-four text-lg"></i> Dasbor
+                </a>
+                
+                <a href="products.html" class="flex items-center gap-3 px-3 py-2 rounded-sm bg-orange-50 text-primary font-medium transition-colors">
+                    <i class="ph ph-package text-lg"></i> Produk
+                </a>
+
+                <a href="users.html" class="flex items-center gap-3 px-3 py-2 rounded-sm text-gray-600 hover:bg-gray-50 hover:text-primary transition-colors">
+                    <i class="ph ph-users text-lg"></i> Pengguna
+                </a>
+
+                <a href="settings.html" class="flex items-center gap-3 px-3 py-2 rounded-sm text-gray-600 hover:bg-gray-50 hover:text-primary transition-colors">
+                    <i class="ph ph-gear text-lg"></i> Pengaturan
+                </a>
+            </nav>
+        </div>
+
+        <!-- Footer / Logout -->
+        <div class="p-4 border-t border-gray-100">
+            <a href="index.html" class="flex items-center gap-2 px-3 py-2 text-sm text-gray-500 hover:text-red-600 transition-colors">
+                <i class="ph ph-sign-out text-lg"></i> Keluar
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Wrapper -->
+    <div class="flex-1 ml-60 flex flex-col min-h-screen">
+        
+        <!-- Top Header -->
+        <header class="h-14 bg-white border-b border-gray-200 flex items-center justify-between px-6 sticky top-0 z-10 shadow-sm">
+            <h2 class="text-sm font-medium text-gray-800">Daftar Produk</h2>
+            
+            <div class="flex items-center gap-4">
+                <button class="text-gray-400 hover:text-gray-600 transition-colors">
+                    <i class="ph ph-bell text-lg"></i>
+                </button>
+                <div class="h-5 border-l border-gray-200"></div>
+                <div class="flex items-center gap-2">
+                    <div class="w-7 h-7 rounded-full bg-gray-100 flex items-center justify-center text-primary overflow-hidden">
+                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Budi" alt="Avatar" class="w-full h-full object-cover">
+                    </div>
+                    <span class="text-xs font-medium text-gray-600">eBox Official</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-6">
+            <div class="mb-4 flex justify-between items-center">
+                <h3 class="text-base font-medium text-gray-800">Manajemen Produk</h3>
+                <a href="add-produk.html" class="bg-primary text-white text-xs font-medium py-2 px-3 rounded-sm hover:bg-orange-600 transition-colors shadow-sm">
+                    Tambah Produk
+                </a>
+            </div>
+
+            <!-- Table -->
+            <div class="bg-white rounded-sm border border-gray-200 shadow-sm overflow-hidden">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-xs">
+                        <thead class="bg-gray-50 border-b border-gray-200 text-gray-600">
+                            <tr>
+                                <th class="py-3 px-4 font-medium w-12 text-center">No</th>
+                                <th class="py-3 px-4 font-medium">Nama Produk</th>
+                                <th class="py-3 px-4 font-medium w-24 text-center">Stok</th>
+                                <th class="py-3 px-4 font-medium w-32 text-center">Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-100 text-gray-700">
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="py-3 px-4 text-center">1</td>
+                                <td class="py-3 px-4">aifon 15 Pro Max 1TB</td>
+                                <td class="py-3 px-4 text-center">24</td>
+                                <td class="py-3 px-4 text-center">
+                                    <div class="flex justify-center gap-3">
+                                        <a href="edit-produk.html" class="text-blue-500 hover:text-blue-700 transition-colors" title="Ubah">Ubah</a>
+                                        <button class="text-red-500 hover:text-red-700 transition-colors" title="Hapus">Hapus</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="py-3 px-4 text-center">2</td>
+                                <td class="py-3 px-4">mekBuk Pro M3 Max 16"</td>
+                                <td class="py-3 px-4 text-center text-red-500">2</td>
+                                <td class="py-3 px-4 text-center">
+                                    <div class="flex justify-center gap-3">
+                                        <a href="edit-produk.html" class="text-blue-500 hover:text-blue-700 transition-colors" title="Ubah">Ubah</a>
+                                        <button class="text-red-500 hover:text-red-700 transition-colors" title="Hapus">Hapus</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="py-3 px-4 text-center">3</td>
+                                <td class="py-3 px-4">epel Wots Seri 9 Titanium</td>
+                                <td class="py-3 px-4 text-center">15</td>
+                                <td class="py-3 px-4 text-center">
+                                    <div class="flex justify-center gap-3">
+                                        <a href="edit-produk.html" class="text-blue-500 hover:text-blue-700 transition-colors" title="Ubah">Ubah</a>
+                                        <button class="text-red-500 hover:text-red-700 transition-colors" title="Hapus">Hapus</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="py-3 px-4 text-center">4</td>
+                                <td class="py-3 px-4">aipet Pro 12.9" M2</td>
+                                <td class="py-3 px-4 text-center">8</td>
+                                <td class="py-3 px-4 text-center">
+                                    <div class="flex justify-center gap-3">
+                                        <a href="edit-produk.html" class="text-blue-500 hover:text-blue-700 transition-colors" title="Ubah">Ubah</a>
+                                        <button class="text-red-500 hover:text-red-700 transition-colors" title="Hapus">Hapus</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="py-3 px-4 text-center">5</td>
+                                <td class="py-3 px-4">erPods Pro Gen 2 (Type-C)</td>
+                                <td class="py-3 px-4 text-center">50</td>
+                                <td class="py-3 px-4 text-center">
+                                    <div class="flex justify-center gap-3">
+                                        <a href="edit-produk.html" class="text-blue-500 hover:text-blue-700 transition-colors" title="Ubah">Ubah</a>
+                                        <button class="text-red-500 hover:text-red-700 transition-colors" title="Hapus">Hapus</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="py-3 px-4 text-center">6</td>
+                                <td class="py-3 px-4">mek Mini M2 Pro</td>
+                                <td class="py-3 px-4 text-center text-red-500">4</td>
+                                <td class="py-3 px-4 text-center">
+                                    <div class="flex justify-center gap-3">
+                                        <a href="edit-produk.html" class="text-blue-500 hover:text-blue-700 transition-colors" title="Ubah">Ubah</a>
+                                        <button class="text-red-500 hover:text-red-700 transition-colors" title="Hapus">Hapus</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="py-3 px-4 text-center">7</td>
+                                <td class="py-3 px-4">aifon 14 Plus 256GB</td>
+                                <td class="py-3 px-4 text-center">32</td>
+                                <td class="py-3 px-4 text-center">
+                                    <div class="flex justify-center gap-3">
+                                        <a href="edit-produk.html" class="text-blue-500 hover:text-blue-700 transition-colors" title="Ubah">Ubah</a>
+                                        <button class="text-red-500 hover:text-red-700 transition-colors" title="Hapus">Hapus</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="py-3 px-4 text-center">8</td>
+                                <td class="py-3 px-4">mek Studio M2 Ultra</td>
+                                <td class="py-3 px-4 text-center">1</td>
+                                <td class="py-3 px-4 text-center">
+                                    <div class="flex justify-center gap-3">
+                                        <a href="edit-produk.html" class="text-blue-500 hover:text-blue-700 transition-colors" title="Ubah">Ubah</a>
+                                        <button class="text-red-500 hover:text-red-700 transition-colors" title="Hapus">Hapus</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="py-3 px-4 text-center">9</td>
+                                <td class="py-3 px-4">aipet Er Gen 5</td>
+                                <td class="py-3 px-4 text-center">18</td>
+                                <td class="py-3 px-4 text-center">
+                                    <div class="flex justify-center gap-3">
+                                        <a href="edit-produk.html" class="text-blue-500 hover:text-blue-700 transition-colors" title="Ubah">Ubah</a>
+                                        <button class="text-red-500 hover:text-red-700 transition-colors" title="Hapus">Hapus</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="py-3 px-4 text-center">10</td>
+                                <td class="py-3 px-4">epel Pensil Gen 2</td>
+                                <td class="py-3 px-4 text-center">27</td>
+                                <td class="py-3 px-4 text-center">
+                                    <div class="flex justify-center gap-3">
+                                        <a href="edit-produk.html" class="text-blue-500 hover:text-blue-700 transition-colors" title="Ubah">Ubah</a>
+                                        <button class="text-red-500 hover:text-red-700 transition-colors" title="Hapus">Hapus</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
