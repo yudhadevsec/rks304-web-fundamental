@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #f4f4f5;
+        }
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: url('background.webp');
+            background-size: cover;
+            background-position: center;
+            filter: saturate(20%);
+            z-index: -1;
+        }
+        .error-text {
+            display: none;
+        }
+        .error-text.show {
+            display: block;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4 font-sans text-zinc-800 py-12 relative">
+
+    <div class="max-w-sm w-full bg-white rounded-2xl shadow-sm p-6 border border-zinc-200 relative">
+        <div class="mb-4">
+            <h1 class="text-xl font-medium text-zinc-800 mb-0.5">Buat Akun Baru</h1>
+            <p class="text-zinc-500 text-[13px]">Masukkan data diri Anda di bawah ini.</p>
+        </div>
+
+        <form id="registerForm" action="dashboard.html" method="GET" class="space-y-3" novalidate>
+            
+            <!-- Nama -->
+            <div>
+                <label for="nama" class="block text-[13px] text-zinc-600 mb-1">Nama</label>
+                <input type="text" id="nama" name="nama" 
+                    class="w-full px-3 py-2 text-sm rounded-lg border border-zinc-300 focus:border-zinc-500 focus:outline-none bg-zinc-50 text-zinc-800">
+                <p id="err-nama" class="error-text text-red-600 text-xs mt-1"></p>
+            </div>
+
+            <!-- Username -->
+            <div>
+                <label for="username" class="block text-[13px] text-zinc-600 mb-1">Username</label>
+                <input type="text" id="username" name="username" 
+                    class="w-full px-3 py-2 text-sm rounded-lg border border-zinc-300 focus:border-zinc-500 focus:outline-none bg-zinc-50 text-zinc-800">
+                <p id="err-username" class="error-text text-red-600 text-xs mt-1"></p>
+            </div>
+
+            <!-- Password -->
+            <div>
+                <label for="password" class="block text-[13px] text-zinc-600 mb-1">Kata sandi</label>
+                <input type="password" id="password" name="password" 
+                    class="w-full px-3 py-2 text-sm rounded-lg border border-zinc-300 focus:border-zinc-500 focus:outline-none bg-zinc-50 text-zinc-800">
+                <p id="err-password" class="error-text text-red-600 text-xs mt-1"></p>
+            </div>
+
+            <!-- Tanggal Lahir -->
+            <div>
+                <label for="tanggalLahir" class="block text-[13px] text-zinc-600 mb-1">Tanggal lahir</label>
+                <input type="date" id="tanggalLahir" name="tanggalLahir" 
+                    class="w-full px-3 py-2 text-sm rounded-lg border border-zinc-300 focus:border-zinc-500 focus:outline-none bg-zinc-50 text-zinc-800">
+                <p id="err-tanggalLahir" class="error-text text-red-600 text-xs mt-1"></p>
+            </div>
+
+            <!-- Alamat -->
+            <div>
+                <label for="alamat" class="block text-[13px] text-zinc-600 mb-1">Alamat</label>
+                <textarea id="alamat" name="alamat" rows="2" 
+                    class="w-full px-3 py-2 text-sm rounded-lg border border-zinc-300 focus:border-zinc-500 focus:outline-none bg-zinc-50 text-zinc-800 resize-none"></textarea>
+                <p id="err-alamat" class="error-text text-red-600 text-xs mt-1"></p>
+            </div>
+
+            <!-- Nomor Telpon -->
+            <div>
+                <label for="telpon" class="block text-[13px] text-zinc-600 mb-1">Nomor telepon</label>
+                <input type="tel" id="telpon" name="telpon" 
+                    class="w-full px-3 py-2 text-sm rounded-lg border border-zinc-300 focus:border-zinc-500 focus:outline-none bg-zinc-50 text-zinc-800">
+                <p id="err-telpon" class="error-text text-red-600 text-xs mt-1"></p>
+            </div>
+
+            <button type="submit" class="w-full mt-4 bg-zinc-800 hover:bg-zinc-900 text-white text-sm font-medium py-2.5 rounded-lg transition-colors duration-200">
+                Kirim Pendaftaran
+            </button>
+        </form>
+    </div>
+
+    <script src="validasi_input.js"></script>
+</body>
+</html>
